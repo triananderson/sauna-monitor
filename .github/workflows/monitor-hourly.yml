@@ -2,7 +2,6 @@ name: Sauna monitor hourly
 
 on:
   schedule:
-    # run at minute 0 every hour (UTC)
     - cron: '0 * * * *'
   workflow_dispatch: {}
 
@@ -23,11 +22,14 @@ jobs:
 
       - name: Run monitor
         env:
-          EMAIL_FROM: ${{tvnl pfji hxtk mjki.com }}
+          EMAIL_FROM: ${{triananderson@gmail.com }}
           EMAIL_TO: ${{ triananderson@gmail.com }}
           SMTP_SERVER: ${{ smtp.gmail.com }}
           SMTP_PORT: ${{ 587 }}
           SMTP_USER: ${{ triananderson@gmail.com }}
           SMTP_PASS: ${{ tvnl pfji hxtk mjki }}
         run: python monitor_good_hot_hourly.py
+
+
+    
 
